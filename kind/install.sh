@@ -9,3 +9,8 @@ cat $dir/Dockerfile | docker build --build-arg TAG=$TAG -t $IMAGE:$TAG -t $IMAGE
 
 # Install executable
 install -v $dir/kind.sh /usr/bin/kind
+
+# Add completion
+target=/etc/bash_completion.d/kind
+kind completion bash > $target
+echo "Added completion to $target."
