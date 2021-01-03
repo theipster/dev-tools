@@ -7,7 +7,7 @@ RUN addgroup -S serverless && \
 
 # Install Serverless Framework
 ARG TAG
-RUN npm install -g serverless@$TAG serverless-cloudformation-sub-variables
+RUN npm install -g serverless@$TAG
 
 # Set defaults
 USER serverless
